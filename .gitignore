@@ -10,6 +10,23 @@ scrapers/raw_entries.json
 scrapers/symposiumContacts_rich.json
 
 # ============================================================
+# Personal files — keep locally, exclude from repo
+# ============================================================
+bubblyAIC/
+introPrompt.md
+CLAUDE.md
+scrapers/enrich_departments.mjs
+scrapers/explore_abstracts.mjs
+scrapers/fetch_all_entries.mjs
+scrapers/filter_uw_seattle.mjs
+scrapers/final_csv.mjs
+scrapers/fix_descriptions.mjs
+scrapers/generate_csv.mjs
+scrapers/get_field_options.mjs
+scrapers/map_campus.mjs
+scrapers/scrape_schedule.mjs
+
+# ============================================================
 # Local configuration — API keys, tokens, credentials
 # ============================================================
 .claude/
