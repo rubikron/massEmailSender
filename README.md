@@ -2,6 +2,35 @@
 
 A multi-agent outreach system for recruiting Research Mentors and Team Leads for a research incubator program. Built around an Obsidian vault for program documentation, a CSV state machine for contact tracking, and parallel AI agent drafting for personalized email generation.
 
+## Quick Start
+
+```bash
+# 1. Clone & install
+git clone https://github.com/rubikron/massEmailSender.git
+cd massEmailSender
+cd scrapers && npm install && cd ..
+npx playwright install chromium
+
+# 2. Configure your data source
+#    Edit scrapers/config.mjs — set TARGET_DOMAINS (or leave [] for any domain)
+
+# 3. Replace placeholders (search entire project for these)
+#    [YOUR_NAME]        → your full name
+#    [YOUR_EMAIL]       → your email address
+#    [YOUR_FIRST_NAME]  → your preferred first name
+#    [COLEAD_NAME]      → co-lead's full name
+#    [COLEAD_EMAIL]     → co-lead's email
+
+# 4. Prepare your contacts
+cp outreach/templates/uw_contacts_raw.csv.example outreach/uw_contacts_raw.csv
+# Populate with your contacts, then:
+python3 outreach/prep_outreach_csv.py
+
+# 5. Send!
+node outreach/gmail_auto_send.js   # Gmail
+node outreach/uw_auto_send.js      # Outlook
+```
+
 ## Architecture
 
 ```
