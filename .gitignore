@@ -1,0 +1,39 @@
+# ============================================================
+# Sensitive Data — Contact lists, scraped data, send logs
+# ============================================================
+outreach/*.csv
+outreach/*.json
+outreach/auto_sent_log.txt
+outreach/manual_sent_log.txt
+outreach/sent_emails.csv
+scrapers/raw_entries.json
+scrapers/symposiumContacts_rich.json
+
+# ============================================================
+# Local configuration — API keys, tokens, credentials
+# ============================================================
+.claude/
+opencode.json
+.env
+.env.*
+*.local.json
+
+# ============================================================
+# Scraper cache / session data
+# ============================================================
+.firecrawl/
+
+# ============================================================
+# Dependencies
+# ============================================================
+node_modules/
+scrapers/node_modules/
+
+# ============================================================
+# OS junk
+# ============================================================
+.DS_Store
+Thumbs.db
+*.pyc
+__pycache__/
+.venv/
